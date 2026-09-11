@@ -372,6 +372,9 @@ export async function handleSystemLink(thoughtId: string): Promise<void> {
     if (!configuration.properties || !Array.isArray(configuration.properties)) {
       configuration.properties = [];
     }
+    if (typeof configuration.frozen_column_index === "number" && configuration.frozen_column_index < 0) {
+      delete configuration.frozen_column_index;
+    }
 
     if (fallbackDataSourceId === MEMORANDUM_DB_ID) {
       const repoUrlKey = Object.keys(dbProperties).find(
