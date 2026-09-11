@@ -273,7 +273,7 @@ export async function POST(req: NextRequest) {
       try {
         const shaHeaders: Record<string, string> = {
           "Accept": "application/vnd.github.sha",
-          "User-Agent": "cogdex-app",
+          "User-Agent": "cogdex-webhook-api",
         };
         if (process.env.GITHUB_TOKEN) {
           shaHeaders["Authorization"] = `Bearer ${process.env.GITHUB_TOKEN}`;
@@ -334,7 +334,7 @@ export async function POST(req: NextRequest) {
           const tarballUrl = `https://api.github.com/repos/${ghInfo.owner}/${ghInfo.repo}/tarball/${ref}`;
           const tarHeaders: Record<string, string> = {
             "Accept": "application/vnd.github+json",
-            "User-Agent": "cogdex-app",
+            "User-Agent": "cogdex-webhook-api",
           };
           if (process.env.GITHUB_TOKEN) {
             tarHeaders["Authorization"] = `Bearer ${process.env.GITHUB_TOKEN}`;

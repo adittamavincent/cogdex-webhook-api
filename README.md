@@ -105,7 +105,7 @@ To sync properly with the codebase, configure these four databases in Notion:
 ## Project Structure
 
 ```
-cogdex-app/
+cogdex-webhook-api/
 ├── app/
 │   ├── api/
 │   │   └── cogdex/

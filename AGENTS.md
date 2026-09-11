@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Repo-specific instructions for future coding agents working on `cogdex-app`.
+Repo-specific instructions for future coding agents working on `cogdex-webhook-api`.
 
 ## Core Truths
 
